@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Displays 1 to 100 where "FizzBuzz" is displayed if the number is a multiple
+# of 3 and 5, "Fizz" if the number is a multiple of 3, and "Buzz" if the
+# number is a multiple of 5. Otherwise it displays the number
+
+k=1
+
+while [ $k -le 100 ]; do
+      if [ $((k%5)) -eq 0 ] && [ $((k%3)) -eq 0 ]; then
+	  echo "FizzBuzz"
+      elif [ $((k%5)) -eq 0 ]; then
+	  echo "Buzz"
+      elif [ $((k%3)) -eq 0 ]; then
+	  echo "Fizz"
+      else
+	  echo "$k"
+      fi
+      k=$((k+1))
+done

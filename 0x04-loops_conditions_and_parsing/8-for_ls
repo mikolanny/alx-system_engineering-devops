@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Learning how to use cut
+
+for name in *; do
+	if [[ $name == ".*" ]]; then
+		continue
+	else
+		echo "$name" | cut -d "-" -f 2
+	fi
+done

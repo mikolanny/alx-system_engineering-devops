@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Print bad luck from China for 4th, Japan for 9th, Italy for 17
+
+k=1
+while ((k <= 20)); do
+	echo $k
+	case $k in
+		[1-9]|1[0-9]|2[0])
+	if ((k==4)); then
+		echo bad luck from China
+	fi
+	if ((k==9)); then
+		echo bad luck from Japan
+	fi
+	if ((k==17)); then
+		echo bad luck from Italy
+	fi
+	;;
+	esac
+	k=$((k + 1))
+done

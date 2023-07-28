@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Print best school 10 times using while loop in bash. 9th iteration is hi
+k=0
+while ((k < 11)); do
+	if ((k == 9)); then
+		echo Hi
+	else
+		echo Best School
+	fi
+	k=$((k + 1))
+done
